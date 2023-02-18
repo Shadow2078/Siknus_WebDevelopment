@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+        <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" th:href="@{~/css/style.css}">
+    
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+<body>
+      
+    <nav>
+      <img th:src="@{~/Images/logo.png}" alt="no">
+      <div class="navigation">
+          <ul>
+              <i id="menu-close" class="fas fa-times"></i>
+              <li><a th:href="@{~/user/homepage}">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a class="active" th:href="@{~/user/courseslist}">Courses</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="newlogin.html">Profile</a></li>
+          </ul>
+          <img id="menu-btn" src="images/menu.png" alt="">
+      </div>
+
+    </nav>
+          <!--Home-->
+          <section id="about-home">
+            <h2>Explore The Courses</h2>
+           
+          </section>
+          <section id="course">
+            <h1>Our Popular Courses</h1>
+            <p>This is the only thing that we become, beautiful people</p>
+    
+            <div class="course-box">
+
+              <div class="courses" th:each="courses:${listofcourses}"  >
+                  <a th:href="@{~/user/moreinfomation/}+${courses.id}" >
+                  <img th:src="'data:image/png;base64,'+${courses.imageBase64}" height="200" width="100" alt="">
+                <div class="details">
+                  <span>Updated 21/8/21</span>
+                  <h6 th:text="${courses.coursename}"></h6>
+                  <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i> 
+                    <span>(239)</span> 
+                  </div>
+                </div>
+                <div class="cost" th:text="${courses.rate}"></div>
+                  </a>
+              </div>
+<!--                <div class="courses">-->
+<!--                  <img th:src="@{~/Images/c2.jpg}" alt="Where is image ?"/>-->
+<!--                  <div class="details">-->
+<!--                    <span>Updated 21/8/21</span>-->
+<!--                    <h6>Desktop Application Development Course</h6>-->
+<!--                    <div class="star">-->
+<!--                      <i class="fas fa-star"></i>-->
+<!--                      <i class="fas fa-star"></i> -->
+<!--                      <i class="fas fa-star"></i> -->
+<!--                      <i class="fas fa-star"></i> -->
+<!--                      <i class="fas fa-star"></i> -->
+<!--                      <span>(239)</span> -->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="cost">-->
+<!--                    Npr 49.9-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                  <div class="courses">-->
+<!--                    <img th:src="@{~/Images\c3.jpg}" alt="Where is image ?"/>-->
+<!--                    <div class="details">-->
+<!--                      <span>Updated 21/8/21</span>-->
+<!--                      <h6>Machine Learning Course</h6>-->
+<!--                      <div class="star">-->
+<!--                        <i class="fas fa-star"></i>-->
+<!--                        <i class="fas fa-star"></i> -->
+<!--                        <i class="fas fa-star"></i> -->
+<!--                        <i class="fas fa-star"></i> -->
+<!--                        <i class="fas fa-star"></i> -->
+<!--                        <span>(239)</span> -->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                    <div class="cost">-->
+<!--                      Npr 49.9-->
+<!--                    </div>-->
+<!--                    </div>-->
+<!--                    <div class="courses">-->
+<!--                      <img th:src="@{~/Images/c4.jpg}" alt="Where is image ?"/>-->
+<!--                      <div class="details">-->
+<!--                        <span>Updated 21/8/21</span>-->
+<!--                        <h6>Digital Marketing Course</h6>-->
+<!--                        <div class="star">-->
+<!--                          <i class="fas fa-star"></i>-->
+<!--                          <i class="fas fa-star"></i> -->
+<!--                          <i class="fas fa-star"></i> -->
+<!--                          <i class="fas fa-star"></i> -->
+<!--                          <i class="fas fa-star"></i> -->
+<!--                          <span>(239)</span> -->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                      <div class="cost">-->
+<!--                        Npr 49.9-->
+<!--                      </div>-->
+<!--                      </div>-->
+<!--                      <div class="courses">-->
+<!--                        <img th:src="@{~/Images/c6.jpg}" alt="Where is image ?"/>-->
+<!--                        <div class="details">-->
+<!--                          <span>Updated 21/8/21</span>-->
+<!--                          <h6>Data Science Course</h6>-->
+<!--                          <div class="star">-->
+<!--                            <i class="fas fa-star"></i>-->
+<!--                            <i class="fas fa-star"></i> -->
+<!--                            <i class="fas fa-star"></i> -->
+<!--                            <i class="fas fa-star"></i> -->
+<!--                            <i class="fas fa-star"></i> -->
+<!--                            <span>(239)</span> -->
+<!--                          </div>-->
+<!--                        </div>-->
+<!--                        <div class="cost">-->
+<!--                          Npr 49.9-->
+<!--                        </div>-->
+<!--                        </div>-->
+<!--                        <div class="courses">-->
+<!--                          <img th:src="@{~/Images/c6.jpg}" alt="Where is image ?"/>-->
+<!--                          <div class="details">-->
+<!--                            <span>Updated 21/8/21</span>-->
+<!--                            <h6>Software Development Course</h6>-->
+<!--                            <div class="star">-->
+<!--                              <i class="fas fa-star"></i>-->
+<!--                              <i class="fas fa-star"></i> -->
+<!--                              <i class="fas fa-star"></i> -->
+<!--                              <i class="fas fa-star"></i> -->
+<!--                              <i class="fas fa-star"></i> -->
+<!--                              <span>(239)</span> -->
+<!--                            </div>-->
+<!--                          </div>-->
+<!--                          <div class="cost">-->
+<!--                            Npr 49.9-->
+<!--                          </div>-->
+<!--                          </div>-->
+<!--                          <div class="courses">-->
+<!--                            <img th:src="@{~/Images/b1.jpg}" alt="Where is image ?"/>-->
+<!--                            <div class="details">-->
+<!--                              <span>Updated 21/8/21</span>-->
+<!--                              <h6> Web Development Course</h6>-->
+<!--                              <div class="star">-->
+<!--                                <i class="fas fa-star"></i>-->
+<!--                                <i class="fas fa-star"></i> -->
+<!--                                <i class="fas fa-star"></i> -->
+<!--                                <i class="fas fa-star"></i> -->
+<!--                                <i class="fas fa-star"></i> -->
+<!--                                <span>(239)</span> -->
+<!--                              </div>-->
+<!--                            </div>-->
+<!--                            <div class="cost">-->
+<!--                              Npr 49.9-->
+<!--                            </div>-->
+<!--                            </div>-->
+<!--                            <div class="courses">-->
+<!--                              <img th:src="@{~/images/b2.jpg}" alt="Where is image ?"/>-->
+<!--                              <div class="details">-->
+<!--                                <span>Updated 21/8/21</span>-->
+<!--                                <h6>Python Beginners Course</h6>-->
+<!--                                <div class="star">-->
+<!--                                  <i class="fas fa-star"></i>-->
+<!--                                  <i class="fas fa-star"></i> -->
+<!--                                  <i class="fas fa-star"></i> -->
+<!--                                  <i class="fas fa-star"></i> -->
+<!--                                  <i class="fas fa-star"></i> -->
+<!--                                  <span>(239)</span> -->
+<!--                                </div>-->
+<!--                              </div>-->
+<!--                              <div class="cost">-->
+<!--                                Npr 49.9-->
+<!--                              </div>-->
+<!--                              </div>-->
+<!--                              <div class="courses">-->
+<!--                                <img th:src="@{~/images/b3.jpg}" alt="Where is image ?"/>-->
+<!--                                <div class="details">-->
+<!--                                  <span>Updated 21/8/21</span>-->
+<!--                                  <h6>Java Springboot Beginners Course</h6>-->
+<!--                                  <div class="star">-->
+<!--                                    <i class="fas fa-star"></i>-->
+<!--                                    <i class="fas fa-star"></i> -->
+<!--                                    <i class="fas fa-star"></i> -->
+<!--                                    <i class="fas fa-star"></i> -->
+<!--                                    <i class="fas fa-star"></i> -->
+<!--                                    <span>(239)</span> -->
+<!--                                  </div>-->
+<!--                                </div>-->
+<!--                                <div class="cost">-->
+<!--                                  Npr 49.9-->
+<!--                                </div>-->
+<!--                                </div>-->
+<!--                                <div class="courses">-->
+<!--                                  <img th:src="@{~/Images/b2.jpg}" alt="Where is image ?"/>-->
+<!--                                  <div class="details">-->
+<!--                                    <span>Updated 21/8/21</span>-->
+<!--                                    <h6>Flutter Beginners Course</h6>-->
+<!--                                    <div class="star">-->
+<!--                                      <i class="fas fa-star"></i>-->
+<!--                                      <i class="fas fa-star"></i> -->
+<!--                                      <i class="fas fa-star"></i> -->
+<!--                                      <i class="fas fa-star"></i> -->
+<!--                                      <i class="fas fa-star"></i> -->
+<!--                                      <span>(239)</span> -->
+<!--                                    </div>-->
+<!--                                  </div>-->
+<!--                                  <div class="cost">-->
+<!--                                    Npr 49.9-->
+<!--                                  </div>-->
+<!--                                  </div>-->
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+
+
+          <footer>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Power Tools</li>
+              <li>Managed Website</li>
+              <li>Marketing Service</li>
+              <li>Jobs</li>
+              <li>Marketing Service</li>
+            </div>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Power Tools</li>
+              <li>Managed Website</li>
+            </div>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Marketing Service</li>
+            </div>
+            <div class="footer-col">
+              <h3>Guides</h3>
+              <li>Research</li>
+              <li>Experts</li>
+              <li>Managed Websites</li>
+            </div>
+            <div class="footer-col">
+              <h3>NewsLetter</h3>
+              <p>You can trust us, we only send promo offers</p>
+              <div class="subscribe">
+                <input type="text" placeholder="Your Email Address">
+                <a href="#" class="yellow">Subscribe</a>
+              </div>
+      
+            </div>
+      
+         
+      
+      
+          </footer>    
+    
+</body>
+</html>

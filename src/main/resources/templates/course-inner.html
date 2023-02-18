@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+        <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" th:href="@{~/css/style.css}">
+    
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+<body>
+      
+    <nav>
+      <img th:src="@{~/Images/logo.png}" alt="no">
+      <div class="navigation">
+          <ul>
+              <i id="menu-close" class="fas fa-times"></i>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a class="active"  href="courses.html">Courses</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="newlogin.html">Profile</a></li>
+          </ul>
+          <img id="menu-btn" src="images/menu.png" alt="">
+      </div>
+
+    </nav>
+          <!--Home-->
+          <section id="about-home">
+            <h2>Enroll Our Popular Courses And Skill Up</h2>
+           
+          </section>
+
+          <section id="course-inner">
+           <div class="overview">
+<!--            <img class="course-img" th:src="@{~/Images/c1.jpg}">-->
+               <img class="course-img"  th:src="'data:image/png;base64,'+${courses.imageBase64}" />
+           <div class="course-head">
+            <div class="c-name">
+                <h2 th:text="${courses.coursename}"></h2>
+                <div class="star">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i>
+                </div> 
+                <p th:text="${courses.coursedescription}" >
+                </p>
+
+            </div>
+            <span th:text="${courses.rate}"></span>
+           </div>
+           <h3>Instructor</h3>
+           <div class="tutor">
+            <img th:src="@{~/Images/c4.jpg}">
+            <div class="tutor-det">
+              <h5 th:text="${courses.instructorsname}"></h5>
+              <p th:text="${courses.instructorqualification}"></p>
+            </div>
+           </div>
+           <h3>Course Overview</h3>
+               <p th:text="${courses.courseoverview}"></p>
+           <p>
+            Generating random paragraphs can be an excellent way for writers to get their creative flow going at the beginning of the day. The writer has no idea what topic the random paragraph will be about when it appears. This forces the writer to use creativity to complete one of three common writing challenges. The writer can use the paragraph as the first one of a short story and build upon it. A second option is to use the random paragraph somewhere in a short story they create.
+             The third option is to have the random paragraph be the ending paragraph in a short story. No matter which of these challenges is undertaken, the writer is forced to use creativity to incorporate the paragraph into their writing.
+            </p>
+            <hr>
+            <h3>What you'll learn</h3>
+            <div class="learn">
+              <p><i class="far fa-check-circle"></i> JavaScript from scratch-beginner to advanced</p>
+              <p><i class="far fa-check-circle"></i> Everything you need to become a JavaScript expert and apply for JavaScript jobs</p>
+              <p><i class="far fa-check-circle"></i> All about variables, functions, objects and arrays</p>
+              <p><i class="far fa-check-circle"></i> All core features and concepts you need to know in modern JavaScript development</p>
+              <p><i class="far fa-check-circle"></i> Project-driven learning with plenty of examples</p>
+              <p><i class="far fa-check-circle"></i> Object-oriented programming</p>
+            </div>
+            </div>
+
+              <form th:method="post" th:action="@{/user/saveEnroll}" th:object="${enroll}" >
+           <div class="enroll">
+            <h3>This course includes:</h3>
+              <p><i class="fas fa-video"></i>52 hours video</p>
+              <p><i class="fas fa-newspaper"></i> 75 articles</p>
+              <p><i class="fas fa-cloud-download"></i>Downloadable Resources</p>
+              <p><i class="fas fa-infinity"></i>Full Lifetime Access</p>
+              <p><i class="fas fa-mobile-alt"></i> Access on mobile and TV</p>
+              <p><i class="fas fa-paperclip"></i> Assignments</p>
+              <p><i class="fa fa-certificate"></i> Certificate of completion</p>
+                   <input type="text" hidden="hidden" th:value="${info.id}" name="user_id">
+                   <input type="text" hidden="hidden" th:value="${courses.id}" name="course_id">
+              <div class="enroll-btn">
+                   <button type="submit" class="blue"> Enroll Course </button>
+<!--                <a class="blue" >Enroll Course</a>-->
+              </div>
+
+           </div>
+              </form>
+          </section>
+
+
+
+
+
+
+
+
+          <footer>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Power Tools</li>
+              <li>Managed Website</li>
+              <li>Marketing Service</li>
+              <li>Jobs</li>
+              <li>Marketing Service</li>
+            </div>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Power Tools</li>
+              <li>Managed Website</li>
+            </div>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Marketing Service</li>
+            </div>
+            <div class="footer-col">
+              <h3>Guides</h3>
+              <li>Research</li>
+              <li>Experts</li>
+              <li>Managed Websites</li>
+            </div>
+            <div class="footer-col">
+              <h3>NewsLetter</h3>
+              <p>You can trust us, we only send promo offers</p>
+              <div class="subscribe">
+                <input type="text" placeholder="Your Email Address">
+                <a href="#" class="yellow">Subscribe</a>
+              </div>
+      
+            </div>
+      
+         
+      
+      
+          </footer>    
+    
+</body>
+</html>

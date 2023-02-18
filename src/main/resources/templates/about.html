@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+        <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" th:href="@{~/css/style.css}">
+    
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+</head>
+<body>
+      
+    <nav>
+      <img th:src="@{~/Images/logo.png}" alt="no">
+      <div class="navigation">
+          <ul>
+              <i id="menu-close" class="fas fa-times"></i>
+              <li><a href="index.html">Home</a></li>
+              <li><a class="active"  href="about.html">About</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="newlogin.html">Profile</a></li>
+          </ul>
+          <img id="menu-btn" th:src="@{~/Images/menu.png}" alt="">
+      </div>
+
+    </nav>
+          <!--Home-->
+          <section id="about-home">
+            <h2> About Siknus</h2>
+           
+          </section>
+        <section id="about-container">
+            <div class="about-img">
+                <img th:src="@{~/Images/a.png}">
+            </div>
+
+            <div class="about-text">
+                    <h2>Welcome to Siknus, Enhance your skills with best online courses</h2>
+                    <p>You can start and finish one of these popular courses in under a day-for free! Check out the list below. Take the course for free</p>
+                    <div class="about-fe">
+                        <img th:src="@{~/Images/fe1.png}" alt="">
+                        <div class="fe-text">
+                            <h5>400+ Courses</h5>
+                            <p>You can start and finish one of these popular courses in under our site</p>
+                        </div>
+                    </div>
+                    <div class="about-fe">
+                        <img th:src="@{~/images/fe2.png}" alt="">
+                        <div class="fe-text">
+                            <h5>Lifetime Access</h5>
+                            <p>You can start and finish one of these popular courses in under our site</p>
+                        </div>
+                    </div>
+                </div>
+            
+        </section>
+          <section id="features">
+            <h1>Awesome Features</h1>
+            <p>Awesome facility to learn online courses easily</p>
+            <div class="fea-base">
+              <div class="fea-box">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <h3>Scholarship Facility</h3>
+                <p>Write something that is suitable in the particular paragraph</p>
+    
+              </div>
+              <div class="fea-box">
+                <i class="fas fa-certificate" aria-hidden="true"></i>
+                <h3>Dell Online Courses</h3>
+                <p>Take that money and watch it burn, sink in the river the lessons are learnt</p>
+    
+              </div>
+              <div class="fea-box">
+                <i class="fa-solid fa-award"></i>
+                <h3>Global Certification</h3>
+                <p>So what we get drunk, we are just having fun, living young, wild and free</p>
+    
+              </div>
+            </div>
+          </section>
+
+          <section id="trust">
+            <h1>Trusted By</h1>
+            <p>Replenish man have thing gathering lights yeilding shall you</p>
+            <div class="trust-img">
+                <img th:src="@{~/Images/trust (1).png}" alt="">
+                <img th:src="@{~/Images/trust (2).png}" alt="">
+                <img th:src="@{~/mages/trust (3).png}" alt="">
+                <img th:src="@{~/Images/trust (4).png}" alt="">
+                <img th:src="@{~/Images/trust (5).png}" alt="">
+                <img th:src="@{~/Images/trust (6).png}" alt="">
+            </div>
+          </section>
+ 
+
+
+
+
+
+
+
+
+          <footer>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Power Tools</li>
+              <li>Managed Website</li>
+              <li>Marketing Service</li>
+              <li>Jobs</li>
+              <li>Marketing Service</li>
+            </div>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Power Tools</li>
+              <li>Managed Website</li>
+            </div>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Marketing Service</li>
+            </div>
+            <div class="footer-col">
+              <h3>Guides</h3>
+              <li>Research</li>
+              <li>Experts</li>
+              <li>Managed Websites</li>
+            </div>
+            <div class="footer-col">
+              <h3>NewsLetter</h3>
+              <p>You can trust us, we only send promo offers</p>
+              <div class="subscribe">
+                <input type="text" placeholder="Your Email Address">
+                <a href="#" class="yellow">Subscribe</a>
+              </div>
+      
+            </div>
+      
+         
+      
+      
+          </footer>    
+    
+</body>
+</html>

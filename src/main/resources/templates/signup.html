@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" th:href="@{~/css/style.css}" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+      <nav>
+      <img th:src="@{~/images/logo.png}" alt="no">
+      <div class="navigation">
+          <ul>
+              <i id="menu-close" class="fas fa-times"></i>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a class="active" href="signup.html">Profile</a></li>
+          </ul>
+          <img id="menu-btn" th:src="@{~/Images/menu.png}" alt="">
+      </div>
+
+    </nav>
+
+    <section id="signupsection">
+    <div class="container-signup">
+        <div class="picture1">
+            <i class="fas fa-user"></i>
+        </div>
+        <h2 class="title">Sign Up</h2>
+        <form th:method="post" th:action="@{/user/saveuser}" th:object="${user}" >
+        <label for="fname">Full Name</label>
+            <input type="text" id="fname" class="input" autocomplete="off" placeholder="Full Name" th:field="*{fullname}">
+            <label>Birthday</label>
+            <input type="date" id="lname" class="input" autocomplete="off" placeholder="Last Name" th:field="*{birthday}" >
+
+             <label for="fname">Gender</label>
+            <input type="text" id="gender" class="input" autocomplete="off" placeholder="Gender" th:field="*{gender}">
+
+            <label for="email">Email</label>
+            <input type="text" id="email" class="input" autocomplete="off" placeholder="Email" th:field="*{email}" >
+
+            <label for="password">Password</label>
+            <input type="password" id="password" class="input" autocomplete="off" placeholder="Password"th:field="*{password}" >
+
+            <label for="lname">Confirm Password</label>
+            <input type="password" id="cpassword" class="input" autocomplete="off" placeholder="Confirm Password"/>
+           
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    </section>
+
+        <footer>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Power Tools</li>
+              <li>Managed Website</li>
+              <li>Marketing Service</li>
+              <li>Jobs</li>
+              <li>Marketing Service</li>
+            </div>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Power Tools</li>
+              <li>Managed Website</li>
+            </div>
+            <div class="footer-col">
+              <h3>Top Products</h3>
+              <li>Manage Reputation</li>
+              <li>Marketing Service</li>
+            </div>
+            <div class="footer-col">
+              <h3>Guides</h3>
+              <li>Research</li>
+              <li>Experts</li>
+              <li>Managed Websites</li>
+            </div>
+            <div class="footer-col">
+              <h3>NewsLetter</h3>
+              <p>You can trust us, we only send promo offers</p>
+              <div class="subscribe">
+                <input type="text" placeholder="Your Email Address">
+                <a href="#" class="yellow">Subscribe</a>
+              </div>
+      
+            </div>
+      
+         
+      
+      
+          </footer> 
+    
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" th:href="@{~/css/profilestyle.css}">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav>
+        <img th:src="@{~/Images/logo.png}" alt="no">
+        <div class="navigation">
+            <ul>
+                <i id="menu-close" class="fas fa-times"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="profile.html">Profile</a></li>
+            </ul>
+            <img id="menu-btn" th:src="@{~/Images/menu.png}" alt="">
+        </div>
+  
+      </nav>
+    
+    <div class="container">
+        <div class="leftbox">
+            <div class="yo">
+                <a onclick="tabs(0)" class="tab active" >
+                    <i class="fa fa-user"></i>
+                </a>
+               
+            </div>
+            
+        </div>
+        <div class="rightbox">
+            <div class="profile tabShow">
+                <h1>Personal Info</h1>
+                <h2>Full Name</h2>
+                <input type="text" class="input" value="Suman Karki">
+                <h2>Birthday</h2>
+                <input type="text" class="input" value="April 20, 1992">
+                <h2>Gender</h2>
+                <input type="text" class="input" value="Male">
+                <h2>Email</h2>
+                <input type="text" class="input" value="karkisuman2021@gmail.com.">
+                <h2>Password</h2>
+                <input type="password" class="input" value="karmapoint">
+                <button class="btn">Update</button>
+                <button class="btn">Delete Account</button> <br>
+                <button class="btn">Log Out</button>
+                
+            </div>
+            <div class="Payment tabShow">
+                <h1>Payment Info</h1>
+                <h2>Payment Method</h2>
+                <input type="text" class="input" value="MasterCard-0202 ********2234">
+                <h2>Billing Address</h2>
+                <input type="text" class="input" value="1234 some street in a town">
+                <h2>ZipCode</h2>
+                <input type="text" class="input" value="44916">
+                <h2>Billing Date</h2>
+                <input type="text" class="input" value="Jan 20,2023">
+                <h2>Redeem Card</h2>
+                <input type="password" class="input" value="Enter gift code">
+                <button class="btn">Update</button>
+                
+            </div>
+            <div class="Subscribtion tabShow">
+                <h1>Subscribtion Info</h1>
+                <h2>Payment Date</h2>
+                <p>May 12, 2019</p>
+                
+                <h2>Next Charges</h2>
+                <p>Npr. 500<span>including tax</span></p>
+                <h2>Plan</h2>
+                <p>Limited Plan</p>
+                <h2>Monthly</h2>
+                <p>Npr. 2000/month</p>
+                
+                <button class="btn">Update</button>
+                
+            </div>
+            <div class="privacy tabShow">
+                <h1>Privacy Settings</h1>
+                <h2>Manage Email Noti.</h2>
+                
+                
+                <h2>Manage Privacy Settings</h2>
+                
+                <h2>View Terms of use</h2>
+                <p></p>
+                <h2>Protect Account</h2>
+                <p></p>
+                
+                <button class="btn">Update</button>
+                
+            </div>
+            <div class="setting tabShow">
+                <h1>Account Settings</h1>
+                <h2>Sync WatchList</h2>
+                <p></p>
+                
+                
+                <h2>Hold Subscription</h2>
+                <p></p>
+                
+                <h2>Cancel Subscribtion</h2>
+                <p></p>
+
+                <h2>Your Devices</h2>
+                <p></p>
+
+                <h2>Referallal</h2>
+                <p></p>
+                
+                <button class="btn">Update</button>
+                
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-col">
+          <h3>Top Products</h3>
+          <li>Manage Reputation</li>
+          <li>Power Tools</li>
+          <li>Managed Website</li>
+          <li>Marketing Service</li>
+          <li>Jobs</li>
+          <li>Marketing Service</li>
+        </div>
+        <div class="footer-col">
+          <h3>Top Products</h3>
+          <li>Manage Reputation</li>
+          <li>Power Tools</li>
+          <li>Managed Website</li>
+        </div>
+        <div class="footer-col">
+          <h3>Top Products</h3>
+          <li>Manage Reputation</li>
+          <li>Marketing Service</li>
+        </div>
+        <div class="footer-col">
+          <h3>Guides</h3>
+          <li>Research</li>
+          <li>Experts</li>
+          <li>Managed Websites</li>
+        </div>
+        <div class="footer-col">
+          <h3>NewsLetter</h3>
+          <p>You can trust us, we only send promo offers</p>
+          <div class="subscribe">
+            <input type="text" placeholder="Your Email Address">
+            <a href="#" class="yellow">Subscribe</a>
+          </div>
+  
+        </div>
+  
+     
+  
+  
+      </footer> 
+
+
+
+
+
+
+   
+    
+     <script>
+        const tabBtn=document.querySelectorAll(".tab");
+        const tab=document.querySelectorAll(".tabShow");
+
+        function tabs(panelIndex){
+            tab.forEach(function(node) {
+                node.style.display="none";
+                
+            });
+            tab[panelIndex].style.display="block";
+        }
+        tabs(0);
+
+
+     </script>
+
+
+     <!-- <script>
+        $(".tab").click(function(){
+            $(this).addClass("active").siblings().removeClass("active");
+        })
+     </script> -->
+    
+</body>
+</html>

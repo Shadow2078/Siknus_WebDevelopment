@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <title>Ed tech tutorial</title>
+  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" th:href="@{~/css/style.css}">
+<!--  <link rel="stylesheet" th:href="@{~/CSS/style.css}">-->
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+
+  <nav>
+    <img th:src="@{~/Images/logo.png}" alt="no">
+    <div class="navigation">
+      <ul class="active">
+        <i id="menu-close" class="fas fa-times"></i>
+        <li><a href="#">
+            <form action="search-input">
+
+              <input type="text" id="search" name="search" placeholder="Search for anything "
+                style=" background-image:url(images\search.png)">
+            </form>
+          </a></li>
+        <li><a class="active" th:href="@{~/user/homepage}">Home</a></li>
+        <li><a  href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a  th:href="@{~/user/courseslist}">Courses</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="newlogin.html">Profile</a></li>
+      </ul>
+      <img id="menu-btn" th:srcsrc="@{~/Images//menu.png}" alt="">
+    </div>
+  </nav>
+
+  <!--Home-->
+  <section id="home">
+    <h2>Enhance your Future with Siknus</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+      Porro aspernatur dolore veritatis odit ipsa vitae voluptatibus
+      perferendis corrupti non. Officiis earum quidem excepturi
+      eum eos at cumque debitis expedita fugiat!</p>
+
+    <div class="btn">
+      <a class="blue" href="#"> Learn More</a>
+      <a class="yellow" href="#"> Visit Courses</a>
+    </div>
+  </section>
+
+  <section id="features">
+    <h1>Awesome Features</h1>
+    <p>Awesome facility to learn online courses easily</p>
+    <div class="fea-base">
+      <div class="fea-box">
+        <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+        <h3>Scholarship Facility</h3>
+        <p>Write something that is suitable in the particular paragraph</p>
+
+      </div>
+      <div class="fea-box">
+        <i class="fas fa-certificate" aria-hidden="true"></i>
+        <h3>Dell Online Courses</h3>
+        <p>Take that money and watch it burn, sink in the river the lessons are learnt</p>
+
+      </div>
+      <div class="fea-box">
+        <i class="fa-solid fa-award"></i>
+        <h3>Global Certification</h3>
+        <p>So what we get drunk, we are just having fun, living young, wild and free</p>
+
+      </div>
+    </div>
+  </section>
+  <section id="course">
+    <h1>Our Popular Courses</h1>
+    <p>This is the only thing that we become, beautiful people</p>
+
+    <div class="course-box">
+
+      <div  onclick="window.location.href='course-inner.html';" class="courses">
+
+        <img th:src="@{~/Images/c1.jpg}" alt="Where is image ?" />
+        <div class="details">
+          <span>Updated 21/8/21</span>
+          <h6>JavaScript Beginners Course</h6>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(239)</span>
+          </div>
+        </div>
+        <div class="cost">
+          Npr 49.9
+        </div>
+      </div>
+      <div class="courses">
+        <img th:src="@{~/Images/c2.jpg}" alt="Where is image ?" />
+        <div class="details">
+          <span>Updated 21/8/21</span>
+          <h6>JavaScript Beginners Course</h6>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(239)</span>
+          </div>
+        </div>
+        <div class="cost">
+          Npr 49.9
+        </div>
+      </div>
+      <div class="courses">
+        <img th:src="@{~/Images/c3.jpg}" alt="Where is image ?" />
+        <div class="details">
+          <span>Updated 21/8/21</span>
+          <h6>JavaScript Beginners Course</h6>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(239)</span>
+          </div>
+        </div>
+        <div class="cost">
+          Npr 49.9
+        </div>
+      </div>
+      <div class="courses">
+        <img th:src="@{~/Images/c4.jpg}" alt="Where is image ?" />
+        <div class="details">
+          <span>Updated 21/8/21</span>
+          <h6>JavaScript Beginners Course</h6>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(239)</span>
+          </div>
+        </div>
+        <div class="cost">
+          Npr 49.9
+        </div>
+      </div>
+      <div class="courses">
+        <img th:src="@{~/Images/c6.jpg}" alt="Where is image ?" />
+        <div class="details">
+          <span>Updated 21/8/21</span>
+          <h6>JavaScript Beginners Course</h6>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(239)</span>
+          </div>
+        </div>
+        <div class="cost">
+          Npr 49.9
+        </div>
+      </div>
+      <div class="courses">
+        <img th:src="@{~/Images/c6.jpg}" alt="Where is image ?" />
+        <div class="details">
+          <span>Updated 21/8/21</span>
+          <h6>JavaScript Beginners Course</h6>
+          <div class="star">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(239)</span>
+          </div>
+        </div>
+        <div class="cost">
+          Npr 49.9
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+
+  <section id="experts">
+    <h1>
+      Community Experts
+    </h1>
+    <div class="expert-box">
+
+      <div class="profile">
+        <img th:src="@{~/Images/pro1.webp}" alt="">
+        <h6>Suman Karki</h6>
+        <p>Python and Algorithm Expert</p>
+        <div class="pro-links">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+      <div class="profile">
+        <img th:src="@{~/Images/pro2.webp}" alt="">
+        <h6>Suman Karki</h6>
+        <p>Python and Algorithm Expert</p>
+        <div class="pro-links">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+      <div class="profile">
+        <img th:src="@{~/Images/pro3.webp}" alt="">
+        <h6>Suman Karki</h6>
+        <p>Python and Algorithm Expert</p>
+        <div class="pro-links">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+      <div class="profile">
+        <img th:src="@{~/Images/pro4.webp}" alt="">
+        <h6>Suman Karki</h6>
+        <p>Python and Algorithm Expert</p>
+        <div class="pro-links">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </section>
+
+  <footer>
+    <div class="footer-col">
+      <h3>Top Products</h3>
+      <li>Manage Reputation</li>
+      <li>Power Tools</li>
+      <li>Managed Website</li>
+      <li>Marketing Service</li>
+      <li>Jobs</li>
+      <li>Marketing Service</li>
+    </div>
+    <div class="footer-col">
+      <h3>Top Products</h3>
+      <li>Manage Reputation</li>
+      <li>Power Tools</li>
+      <li>Managed Website</li>
+    </div>
+    <div class="footer-col">
+      <h3>Top Products</h3>
+      <li>Manage Reputation</li>
+      <li>Marketing Service</li>
+    </div>
+    <div class="footer-col">
+      <h3>Guides</h3>
+      <li>Research</li>
+      <li>Experts</li>
+      <li>Managed Websites</li>
+    </div>
+    <div class="footer-col">
+      <h3>NewsLetter</h3>
+      <p>You can trust us, we only send promo offers</p>
+      <div class="subscribe">
+        <input type="text" placeholder="Your Email Address">
+        <a href="#" class="yellow">Subscribe</a>
+      </div>
+
+    </div>
+
+
+
+
+  </footer>
+
+  <script>
+    $('#menu-btn').click(function () {
+      $('nav .navigation ul').addClass('active')
+
+    });
+    $('#menu-close').click(function () {
+      $('nav .navigation ul').removeClass('active')
+
+    });
+  </script>
+
+
+</body>
+
+</html>
