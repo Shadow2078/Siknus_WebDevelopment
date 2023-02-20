@@ -11,7 +11,7 @@
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link rel="stylesheet" th:href="@{~/css/style.css}">
+  <link rel="stylesheet" th:href="@{/css/style.css}" th:inline="text">
 <!--  <link rel="stylesheet" th:href="@{~/CSS/style.css}">-->
 
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
@@ -32,22 +32,24 @@
             <form action="search-input">
 
               <input type="text" id="search" name="search" placeholder="Search for anything "
-                style=" background-image:url(images\search.png)">
+                >
             </form>
           </a></li>
         <li><a class="active" th:href="@{~/user/homepage}">Home</a></li>
-        <li><a  href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a th:href="@{~/user/about}">About</a></li>
+        <li><a th:href="@{~/user/blog}">Blog</a></li>
         <li><a  th:href="@{~/user/courseslist}">Courses</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="newlogin.html">Profile</a></li>
+        <li><a th:href="@{~/user/contact}">Contact</a></li>
+        <li><a th:href="@{~/user/profile}">Profile</a></li>
       </ul>
-      <img id="menu-btn" th:srcsrc="@{~/Images//menu.png}" alt="">
+      <img id="menu-btn" th:src="@{~/Images//menu.png}" alt="">
     </div>
   </nav>
-// This is home section.
   <!--Home-->
   <section id="home">
+    <img th:src="@{~/Images/back.jpg}" alt="">
+
+    <div class="home-content">
     <h2>Enhance your Future with Siknus</h2>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
       Porro aspernatur dolore veritatis odit ipsa vitae voluptatibus
@@ -57,6 +59,7 @@
     <div class="btn">
       <a class="blue" href="#"> Learn More</a>
       <a class="yellow" href="#"> Visit Courses</a>
+    </div>
     </div>
   </section>
 

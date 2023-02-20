@@ -71,5 +71,27 @@ public class UserController {
                 enrollmentServices.save(enrollmentPojo);
                 return "redirect:/user/homepage";
         }
+
+        @GetMapping("/about")
+        public String getPage() {
+                return "/about";
+        }
+
+        @GetMapping("/blog")
+        public String getBlog() {
+                return "/blog";
+        }
+
+        @GetMapping("/contact")
+        public String getContact() {
+                return "/contact";
+        }
+
+        @GetMapping("/profile")
+        public String getProfile() {
+                return "/profile";
+        }
+
+
 }
 

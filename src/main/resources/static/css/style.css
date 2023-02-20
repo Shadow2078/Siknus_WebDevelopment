@@ -35,7 +35,7 @@ a{
 }
 
 nav{
-    position: fixed;
+    position: relative;
     width: 100%;
     height: 100px;
     background-color: #fff;
@@ -105,37 +105,72 @@ form{
 
 
 #home{
-    background-image: linear-gradient(rgb(9,5,54,0.3), rgba(5,4,46,0.7)),url("images/back.jpg");
-    width: 100%;
-    height: 150vh;
+    /*background-image: linear-gradient(rgb(9,5,54,0.3), rgba(5,4,46,0.7), url("Images/back.jpg");*/
+    /*width: 100%;*/
+    /*height: 150vh;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*text-align: center;*/
+    /*padding-top: 30%;*/
+
+/* 2/20/2023  */
+    height: 90vh;
     background-size: cover;
     background-position: center;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 30%;
 
 }
+
+/* 2/20/2023  */
+#home img {
+    width: 100%;
+    height: inherit;
+    z-index: 999;
+    position: absolute;
+}
+
+/* 2/20/2023  */
+#home .home-content {
+    justify-content: center;
+    display: flex;
+    top: 40%;
+    position: relative;
+}
+
 #home h2{
-    color: white;
+    color: black;
     font-size: 2.2rem;
     letter-spacing: 1px;
 
+    /* 2/20/2023  */
+    z-index: 999;
+    position: absolute;
 }
+
 #home p{
     width: 50%;
-    color: white;
+    color: black;
     font-size: 0.9rem;
     line-height: 25px;
     text-align: center;
     margin-left: 400px;
 
+    /* 2/20/2023  */
+    position: absolute;
+    z-index: 999;
+    padding-top: 55px;
 
 
 }
 #home .btn{
     margin-top: 30px;
+
+    /* 2/20/2023  */
+    padding-top: 125px;
+    position: absolute;
+    z-index: 999;
 
 }
 #home a{
