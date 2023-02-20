@@ -34,10 +34,7 @@ public class AdminController {
     private final UserService userService;
     private final EnrollmentServices enrollmentServices;
 
-    @GetMapping("/dashboard")
-    public String getDashboard() {
-        return "/dashboard";
-    }
+
 
     @GetMapping("/addcourse") //first maa chaine kura
     public String getSetting(Model model) {
